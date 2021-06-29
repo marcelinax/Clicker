@@ -13,6 +13,7 @@ class Clicks {
     this.renderGoals();
     this.showGoalsBox();
     this.showProgress();
+    this.initClearClicker();
   }
   countClicks() {
     document.addEventListener("keyup", () => {
@@ -91,6 +92,20 @@ class Clicks {
       progressBar.style.width = `${progress}%`;
       progressBar.style.backgroundColor = "white";
     }
+  }
+  clearClicker() {
+    this.goals = 0;
+    this.clicks = 0;
+    this.saveGoalsInLocalStorage();
+    this.saveClicksInLocalStorage();
+    window.location.reload();
+  }
+  initClearClicker() {
+    document
+      .getElementById("delete-goals-btn")
+      .addEventListener("click", () => {
+        this.clearClicker();
+      });
   }
 }
 
