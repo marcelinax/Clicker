@@ -14,14 +14,70 @@
   .clicker-box {
     display: flex;
     flex-direction: column;
-    height: 700px;
-    width: 400px;
+    height: calc(700px - 4rem);
+    width: calc(400px - 4rem);
     background-color: #8912f5;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(#000, 0.2);
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 2rem;
+    .top {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      button {
+        display: flex;
+        align-items: center;
+        outline: none;
+        border: none;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: 0.5s all;
+        &:hover {
+          transform: scale(0.9);
+        }
+        img {
+          width: 40px;
+          height: 40px;
+
+          &:first-child {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      .goals-box {
+        display: none;
+        &--active {
+          display: flex;
+          flex-basis: 50%;
+          justify-content: space-around;
+        }
+
+        input {
+          text-align: center;
+          outline: none;
+          border-radius: 10px;
+          border: none;
+          box-shadow: 0 0 15px rgba(#000, 0.2);
+          background-color: #570b9c;
+          width: 30px;
+          height: 30px;
+          padding: 0.5rem;
+
+          color: white;
+          &::placeholder {
+            color: white;
+          }
+        }
+      }
+    }
     .clicker-border {
       display: flex;
       background-color: #750ecf;
@@ -38,9 +94,38 @@
         height: 100%;
         background-color: #570b9c;
         border-radius: 50%;
-        p {
+        .clicks {
           color: white;
           font-size: 3rem;
+          font-weight: 500;
+        }
+      }
+    }
+    .bottom {
+      width: 100%;
+
+      flex-direction: column;
+
+      display: flex;
+      .progress-bar {
+        width: 100%;
+        height: 8px;
+        background-color: #6b15c4;
+        border-radius: 10px;
+        &-bg {
+          width: 0;
+          height: 8px;
+          border-radius: 10px;
+        }
+      }
+      .info {
+        display: flex;
+        width: 100%;
+        height: 20px;
+        justify-content: space-between;
+        p {
+          color: white;
+          font-size: 1rem;
         }
       }
     }

@@ -12,15 +12,23 @@
     <div class="container">
       <div class="clicker-box">
         <div class="top">
-          <button>BUT</button>
+          <button id="set-goals-btn">
+            <img src="./assets/plus-solid.svg" alt="" />
+            <img src="./assets/shoe-prints-solid.svg" alt="" />
+          </button>
+          <div class="goals-box">
+            <input type="text" id="goals" />
+            <button id="confirm-goals-btn">SET</button>
+          </div>
         </div>
         <div class="clicker-border"
           ><div class="clicker-counter">
-            <p id="clicks"></p> </div
+            <p class="clicks" id="clicks"></p> </div
         ></div>
-
         <div class="bottom">
-          <div class="progress-bar"></div>
+          <div class="progress-bar">
+            <div class="progress-bar-bg"></div>
+          </div>
           <div class="info">
             <p id="start"></p>
             <p id="stop"></p>
