@@ -69,6 +69,10 @@ class Clicks {
       .getElementById("confirm-goals-btn")
       .addEventListener("click", () => {
         this.setGoals();
+        window.location.reload();
+        document
+          .querySelector(".goals-box")
+          .classList.toggle("goals-box--active");
       });
   }
   showGoalsBox() {
